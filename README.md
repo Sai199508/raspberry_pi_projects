@@ -98,7 +98,7 @@ Raspberry Pi
 ✅ Tests (PyTest + Mock-based)
 ✅ Linting (Flake8)
 ✅ Type Checking (MyPy)
-✅ Coverage (Coverage.py, badge will update after adding Codecov)
+✅ Coverage
 
 # 🚀 Future Improvements
 
