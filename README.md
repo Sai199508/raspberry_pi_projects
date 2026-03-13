@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge)
 ![Testing](https://img.shields.io/badge/Testing-PyTest-orange?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red?style=for-the-badge)(https://codecov.io/gh/Sai199508/raspberry_pi_projects/branch/master/graph/badge.svg)] <!-- Automatic coverage badge if you configure Codecov or Coveralls later -->
+![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red?style=for-the-badge)[![Coverage](https://codecov.io/gh/Sai199508/raspberry_pi_projects/branch/master/graph/badge.svg)] <!-- Automatic coverage badge if you configure Codecov or Coveralls later -->
 
 ---
 
