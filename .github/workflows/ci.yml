@@ -1,4 +1,4 @@
-name: Raspberry Pi Projects CI
+name: Raspberry Pi Projects CI/CD
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-test-lint:
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,39 +23,40 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+    - name: Upgrade pip
+      run: python -m pip install --upgrade pip
 
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    # ------------------- Run Tests -------------------
     - name: Run Home Automation API Tests
       working-directory: home_automation_api
-      run: |
-        pytest tests
+      run: pytest --maxfail=1 --disable-warnings -q
 
     - name: Run Smart Door Lock Tests
       working-directory: smart_door_lock
-      run: |
-        pytest tests
+      run: pytest --maxfail=1 --disable-warnings -q
 
     - name: Run Smart Temperature System Tests
       working-directory: smart_temperature_system
+      run: pytest --maxfail=1 --disable-warnings -q
+
+    # ------------------- Linting -------------------
+    - name: Run Flake8 Linter
       run: |
-        pytest tests
+        pip install flake8
+        flake8 home_automation_api smart_door_lock smart_temperature_system
 
-    # Future steps for lint / type checking / coverage
-    # - name: Run Linter
-    #   run: |
-    #     pip install flake8
-    #     flake8 home_automation_api smart_door_lock smart_temperature_system
+    # ------------------- Type Checking -------------------
+    - name: Run MyPy Type Checking
+      run: |
+        pip install mypy
+        mypy home_automation_api smart_door_lock smart_temperature_system
 
-    # - name: Type Checking
-    #   run: |
-    #     pip install mypy
-    #     mypy home_automation_api smart_door_lock smart_temperature_system
-
-    # - name: Run Coverage
-    #   run: |
-    #     pip install coverage
-    #     coverage run -m pytest
-    #     coverage report
+    # ------------------- Test Coverage -------------------
+    - name: Run Coverage
+      run: |
+        pip install coverage
+        coverage run -m pytest
+        coverage report -m
