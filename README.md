@@ -5,7 +5,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge)
 ![Testing](https://img.shields.io/badge/Testing-PyTest-orange?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red?style=for-the-badge)
-[![Coverage](https://img.shields.io/badge/Coverage-0%25-lightgrey?style=for-the-badge)](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml) <!-- Automatic coverage badge if you configure Codecov or Coveralls later -->
+[![Coverage](https://img.shields.io/badge/Coverage-0%25-lightgrey?style=for-the-badge)][![Coverage](https://codecov.io/gh/Sai199508/raspberry_pi_projects/branch/master/graph/badge.svg)] <!-- Automatic coverage badge if you configure Codecov or Coveralls later -->
 
 ---
 
