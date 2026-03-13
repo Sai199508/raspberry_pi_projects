@@ -1,10 +1,11 @@
 # 🚀 Raspberry Pi Python Projects
 
 [![CI/CD](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge)
 ![Testing](https://img.shields.io/badge/Testing-PyTest-orange?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi-red?style=for-the-badge)
+[![Coverage](https://img.shields.io/badge/Coverage-0%25-lightgrey?style=for-the-badge)](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml) <!-- Automatic coverage badge if you configure Codecov or Coveralls later -->
 
 ---
 
@@ -27,7 +28,7 @@ The goal is to demonstrate:
 
 Monitors room temperature and triggers alerts.
 
-Features:
+**Features:**
 
 - Sensor abstraction
 - Alert system
@@ -39,7 +40,7 @@ Features:
 
 Simulates a PIN based door lock.
 
-Features:
+**Features:**
 
 - Authentication service
 - Lock controller
@@ -51,16 +52,16 @@ Features:
 
 Control devices using REST API.
 
-Endpoints:
-POST /light/on
-POST /light/off
+**Endpoints:**
 
+- `POST /light/on`
+- `POST /light/off`
 
 ---
 
 # ⚙️ Installation
 
-
+```bash
 pip install -r requirements.txt
 
 
@@ -93,6 +94,12 @@ PyTest
 Raspberry Pi  
 
 ---
+# 📈 Continuous Integration
+
+✅ Tests (PyTest + Mock-based)
+✅ Linting (Flake8)
+✅ Type Checking (MyPy)
+✅ Coverage (Coverage.py, badge will update after adding Codecov)
 
 # 🚀 Future Improvements
 
