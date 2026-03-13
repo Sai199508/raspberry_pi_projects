@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .device_service import DeviceService  # Relative import now works for pytest / CI
+from .device_service import DeviceService
 
 app = FastAPI()
 device = DeviceService()
