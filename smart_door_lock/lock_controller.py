@@ -5,3 +5,4 @@ class LockController:
 
     def lock(self):
         return "Door Locked"
+    

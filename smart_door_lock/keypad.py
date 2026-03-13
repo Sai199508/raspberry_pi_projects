@@ -4,3 +4,4 @@ class Keypad:
 
         pin = input("Enter PIN: ")
         return pin
+    

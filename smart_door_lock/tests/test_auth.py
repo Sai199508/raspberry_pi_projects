@@ -5,11 +5,11 @@ def test_valid_pin():
 
     auth = AuthService("1234")
 
-    assert auth.authenticate("1234") == True
+    assert auth.authenticate("1234")
 
 
 def test_invalid_pin():
 
     auth = AuthService("1234")
 
-    assert auth.authenticate("0000") == False
+    assert not auth.authenticate("0000")

@@ -16,3 +16,4 @@ def test_light_off():
     response = client.post("/light/off")
 
     assert response.status_code == 200
+    

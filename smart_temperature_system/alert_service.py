@@ -11,3 +11,4 @@ class AlertService:
             return "ALERT"
 
         return "NORMAL"
+    
