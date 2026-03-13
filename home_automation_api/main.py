@@ -1,8 +1,8 @@
-from device_service import DeviceService
-from fastapi import FastAPI
 import sys
 import os
 sys.path.append(os.path.dirname(__file__))
+from device_service import DeviceService
+from fastapi import FastAPI
 
 app = FastAPI()
 
