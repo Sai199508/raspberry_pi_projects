@@ -9,4 +9,3 @@ class AuthService:
             return True
 
         return False
-    

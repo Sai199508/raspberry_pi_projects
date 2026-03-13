@@ -5,4 +5,3 @@ class DeviceService:
 
     def light_off(self):
         return "Light OFF"
-    

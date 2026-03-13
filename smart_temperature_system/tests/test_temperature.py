@@ -10,4 +10,3 @@ class FakeSensor:
 def test_high_temperature():
     service = AlertService(FakeSensor())
     assert service.check_temperature() == "ALERT"
-    
