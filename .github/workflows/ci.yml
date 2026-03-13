@@ -1,4 +1,4 @@
-name: Python CI
+name: Raspberry Pi Projects CI
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -29,6 +28,34 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run tests
+    - name: Run Home Automation API Tests
+      working-directory: home_automation_api
       run: |
-        pytest
+        pytest tests
+
+    - name: Run Smart Door Lock Tests
+      working-directory: smart_door_lock
+      run: |
+        pytest tests
+
+    - name: Run Smart Temperature System Tests
+      working-directory: smart_temperature_system
+      run: |
+        pytest tests
+
+    # Future steps for lint / type checking / coverage
+    # - name: Run Linter
+    #   run: |
+    #     pip install flake8
+    #     flake8 home_automation_api smart_door_lock smart_temperature_system
+
+    # - name: Type Checking
+    #   run: |
+    #     pip install mypy
+    #     mypy home_automation_api smart_door_lock smart_temperature_system
+
+    # - name: Run Coverage
+    #   run: |
+    #     pip install coverage
+    #     coverage run -m pytest
+    #     coverage report
