@@ -1,15 +1,7 @@
-import sys
-import os
-
-# Add local module path
-sys.path.append(os.path.dirname(__file__))
-
-# Local imports should come after sys.path modifications
-from device_service import DeviceService
 from fastapi import FastAPI
+from device_service import DeviceService
 
 app = FastAPI()
-
 device = DeviceService()
 
 
@@ -26,3 +18,11 @@ def light_on():
 @app.post("/light/off")
 def light_off():
     return {"status": device.light_off()}
+
+
+if __name__ == "__main__":
+    # Local development sys.path fix (lint ignore)
+    import sys, os
+    sys.path.append(os.path.dirname(__file__))
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
