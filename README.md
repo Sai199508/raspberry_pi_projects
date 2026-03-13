@@ -1,6 +1,6 @@
 # 🚀 Raspberry Pi Python Projects
 
-![CI](https://github.com/Sai199508/CPP_Projects/actions/workflows/cpp-ci.yml/badge.svg)
+[![CI/CD](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml/badge.svg)](https://github.com/<YOUR_USERNAME>/<REPO_NAME>/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green?style=for-the-badge)
 ![Testing](https://img.shields.io/badge/Testing-PyTest-orange?style=for-the-badge)
