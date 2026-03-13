@@ -1,5 +1,5 @@
-from sensor import TemperatureSensor
-from alert_service import AlertService
+from .sensor import TemperatureSensor
+from .alert_service import AlertService
 
 sensor = TemperatureSensor()
 service = AlertService(sensor)
